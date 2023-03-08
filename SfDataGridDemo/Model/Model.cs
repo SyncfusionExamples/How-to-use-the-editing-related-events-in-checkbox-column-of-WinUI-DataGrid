@@ -10,7 +10,8 @@ namespace DataGridDemo
         string country;
         string customerName;
         string shippingCity;
-        private decimal unitPrice;
+        decimal unitPrice;
+        bool _review;
 
         public int OrderID
         {
@@ -45,14 +46,9 @@ namespace DataGridDemo
         public decimal UnitPrice
         {
             get { return unitPrice; }
-            set 
-            {
-                unitPrice = value; 
-                this.RaisePropertyChanged("UnitPrice"); 
-            }
+            set { unitPrice = value; this.RaisePropertyChanged("UnitPrice"); }
         }
-
-        private bool _review;
+       
         public bool Review
         {
             get { return _review; }
@@ -64,7 +60,7 @@ namespace DataGridDemo
 
         }
 
-        public OrderInfo(int orderId, string customerName, string country, string customerId, string shipCity, decimal unitPrice)
+        public OrderInfo(int orderId, string customerName, string country, string customerId, string shipCity, decimal unitPrice, bool review)
         {
             this.OrderID = orderId;
             this.CustomerName = customerName;
@@ -72,7 +68,7 @@ namespace DataGridDemo
             this.CustomerID = customerId;
             this.ShipCity = shipCity;
             this.UnitPrice = unitPrice;
-
+            this.Review = review;
         }
 
         public event PropertyChangedEventHandler PropertyChanged;
