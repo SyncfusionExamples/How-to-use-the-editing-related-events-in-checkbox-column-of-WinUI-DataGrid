@@ -1,7 +1,6 @@
 # How to use the editing related events in GridCheckBoxColumn of WinUI DataGrid (SfDataGrid)?
 
-The **BeginEdit** and **EndEdit** events are not triggered for [GridCheckBoxColumn](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.DataGrid.GridCheckBoxColumn.html) when check or uncheck the CheckBox control in **GridCheckBoxColumn** in [WinUI DataGrid](https://www.syncfusion.com/winui-controls/datagrid) (SfDataGrid). However, you can trigger the **GridCheckBoxColumn** when the CheckBox control is checked or unchecked by using the [CurrentCellValueChanged](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.DataGrid.SfDataGrid.html#Syncfusion_UI_Xaml_DataGrid_SfDataGrid_CurrentCellValueChanged) event.
-
+The **BeginEdit** and **EndEdit** events are not triggered when you check or uncheck the CheckBox control in [GridCheckBoxColumn](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.DataGrid.GridCheckBoxColumn.html) in [WinUI DataGrid](https://www.syncfusion.com/winui-controls/datagrid) (SfDataGrid). However, you can get the notification while changing the CheckBox state by using the [CurrentCellValueChanged](https://help.syncfusion.com/cr/winui/Syncfusion.UI.Xaml.DataGrid.SfDataGrid.html#Syncfusion_UI_Xaml_DataGrid_SfDataGrid_CurrentCellValueChanged) event.
 
 ```C#
 
